@@ -1,0 +1,58 @@
+{
+  "version": "v3-no-quote",
+  "main_rounds": 798,
+  "main_features": [
+    "pickup",
+    "delivery",
+    "equipment",
+    "distance",
+    "weight",
+    "pickup_lat",
+    "pickup_lon",
+    "delivery_lat",
+    "delivery_lon",
+    "market_index",
+    "weight_missing",
+    "market_index_missing",
+    "day_of_week",
+    "month",
+    "day_of_month",
+    "weight_was_negative",
+    "weight_was_empty"
+  ],
+  "excluded": [
+    "quote_signal",
+    "quote_based_rate"
+  ],
+  "reduced_rounds": 790,
+  "training_rows": 48000,
+  "validation_rows": 12000,
+  "december_rows": 31,
+  "seed": 42,
+  "threads": 4,
+  "python": "3.12.14",
+  "versions": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "catboost": "1.2.10",
+    "lightgbm": "4.7.0",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.8"
+  },
+  "code_sha256": {
+    "train.py": "6dd9a59fd72882afcd3ba16aabf308bd0177e579ab8185dece5ad32819f8d546",
+    "compare_models.py": "9961e0ee76bc74ac2adf0448b9d92e871c7bc62af72eb74acdb787217c6a9cc1",
+    "reduced_model.py": "f2802ca5bed65e3d07a74fa8fde24ace41ac8166e875e2e9536f6cadb738b9b8"
+  },
+  "input_sha256": {
+    "train-test.csv": "892980fd20bac7ac0ca4ec31d3981fca48d52dec88e4f02642ab955f1efb40fe",
+    "validation.csv": "f6cdc7c367b397b90b319fc7ad30fd0e1893fd6a714816dda54c303b0fe71151",
+    "validation-predictions-template.csv": "79de15adabcf807b8636b9b47ebe964d451fbcb343056c44a2c4b54a219891c6",
+    "december-chart-inputs.csv": "d4a0cba969e315eae3c967268914960547dc6589568e07bf6182551bdc267e6e"
+  },
+  "output_sha256": {
+    "validation_predictions.csv": "9366f98d9841fda63455e2f7f5c34765163f3b6eee5b1a341d0b6ce603d5a906",
+    "december_predictions.csv": "9e00cd9278afa0593df80ded174cb89e3d72e165538b39e52017ba33ef699bf0"
+  },
+  "note": "Frozen post-v2 development selection; no new October or hidden validation score."
+}

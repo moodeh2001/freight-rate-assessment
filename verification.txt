@@ -1,0 +1,7 @@
+PASS: December predictions are numerically identical to v2.
+PASS: Original December input fields preserved.
+PASS: Main ID order matches template.
+PASS: Main predictions changed from v2.
+PASS: No quote features in final model schema.
+PASS: Organizer score.py is byte-identical to supplied source.
+PASS: Final transformation matches ablation transformation (checked during train.py execution).
