@@ -1,0 +1,11 @@
+{
+  "candidate": "cat_raw_abs_median",
+  "config": {
+    "family": "cat",
+    "target": "raw",
+    "weight": "abs_median"
+  },
+  "selection_mean_monthly_mae": 122.38907921927778,
+  "note": "Development-selected winner of a small search; not an unbiased future-performance estimate.",
+  "final_submission_files_changed": false
+}

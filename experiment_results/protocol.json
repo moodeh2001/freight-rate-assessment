@@ -1,0 +1,46 @@
+{
+  "input_sha256": "892980fd20bac7ac0ca4ec31d3981fca48d52dec88e4f02642ab955f1efb40fe",
+  "code_sha256": "9961e0ee76bc74ac2adf0448b9d92e871c7bc62af72eb74acdb787217c6a9cc1",
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "lightgbm": "4.7.0",
+    "catboost": "1.2.10"
+  },
+  "folds": [
+    {
+      "name": "july_august",
+      "inner_cut": "2025-06-01",
+      "train_end": "2025-07-01",
+      "eval_end": "2025-09-01"
+    },
+    {
+      "name": "september",
+      "inner_cut": "2025-08-01",
+      "train_end": "2025-09-01",
+      "eval_end": "2025-10-01"
+    }
+  ],
+  "seed": 42,
+  "threads": 4,
+  "model_stage": [
+    "rf/raw",
+    "lgb/raw",
+    "lgb/log",
+    "cat/raw"
+  ],
+  "initial_weight_policy": "invalid_median",
+  "weight_stage": [
+    "invalid_median",
+    "abs_median",
+    "invalid_native",
+    "abs_native"
+  ],
+  "ranking": "Unweighted mean dollar MAE over July, August, September; RMSE breaks ties.",
+  "selection_note": "Select best boosting family/target first, then compare four weight policies for that candidate only. Finally compare its winner with original RF. Not an exhaustive search.",
+  "october": "Excluded from training and evaluation; previously inspected in v1, not a fresh holdout.",
+  "targets": "No clipping, deletion or correction of target prices.",
+  "budget": "LGB max 1200 rounds; CatBoost max 800; patience 60; no outer-label early stopping."
+}

@@ -1,0 +1,25 @@
+{
+  "folds": [
+    {
+      "name": "july_august",
+      "inner_cut": "2025-06-01",
+      "train_end": "2025-07-01",
+      "eval_end": "2025-09-01"
+    },
+    {
+      "name": "september",
+      "inner_cut": "2025-08-01",
+      "train_end": "2025-09-01",
+      "eval_end": "2025-10-01"
+    }
+  ],
+  "candidates": [
+    "rf_raw_invalid_median",
+    "cat_raw_abs_median"
+  ],
+  "selection": "Equal-weight mean July/August/September dollar MAE; RMSE tie-break.",
+  "final_iterations": "Use the last development fold inner-selected count, no October tuning.",
+  "cat_max_rounds": 800,
+  "patience": 60,
+  "seed": 42
+}

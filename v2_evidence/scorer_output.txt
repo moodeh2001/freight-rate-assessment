@@ -1,0 +1,10 @@
+Validated 12,000 final predictions.
+Validated 31 fixed December predictions.
+Created chart: scorer_results/candidate_december.png
+Final validation metrics are calculated by Spotter after submission.
+
+Additional packaging checks:
+- Final prediction load_id order matches the supplied template.
+- All original December input fields are preserved.
+- score.py is byte-identical to the organizer-provided file.
+- Reduced-model MAE and RMSE match recomputation from saved outer predictions.
